@@ -1,0 +1,26 @@
+Links for each query are located under the coded answer.
+
+Q1. Write your own SQL query that uses a SELECT statement to order the items by price. 
+Answer: select* from superstore
+        order by price desc;
+http://sqlfiddle.com/#!5/ce3dc3/6459
+
+Q2. Write your own SQL query that will show a statistic about the item prices, like a sum, average, minimum, maximum, or count. 
+Answer: select avg(price), category
+        from superstore
+        group by category
+        order by price desc;
+http://sqlfiddle.com/#!5/ce3dc3/6461
+
+Q3. Write your own SQL query that will show a statistic about the price for items in the category of "Kitchen Supplies".
+Answer: select max(price), item_name
+        from superstore
+        category="Kitchen Supplies";
+http://sqlfiddle.com/#!5/ce3dc3/6462
+
+Q4. Write your own SQL query showing the list of products in descending order with an average rating above 4.5.
+Answer: select item_name, category, average_rating
+        from superstore
+        where average_rating> "4.5"
+        order by average_rating desc;
+http://sqlfiddle.com/#!5/ce3dc3/6454
